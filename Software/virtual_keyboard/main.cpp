@@ -3,8 +3,8 @@
 #include <unordered_map>
 #include "RtMidi.h"
 
-#define NOTE_ON_MSG      128
-#define NOTE_OFF_MSG     144
+#define NOTE_ON_MSG      0x90
+#define NOTE_OFF_MSG     0x80
 #define NOTE_DURATION_MS 500
 
 const std::unordered_map<unsigned char, unsigned char> notemap({{'a', 60},
