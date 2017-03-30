@@ -1,0 +1,393 @@
+g++ -Wall -O3 -std=c++11 -D__MACOSX_CORE__ -framework CoreMIDI -framework CoreFoundation -framework CoreAudio   -c -o RtMidi.o RtMidi.cpp
+In file included from /usr/include/Availability.h:184:0,
+                 from /usr/include/wchar.h:72,
+                 from /usr/local/Cellar/gcc/6.3.0_1/include/c++/6.3.0/cwchar:44,
+                 from /usr/local/Cellar/gcc/6.3.0_1/include/c++/6.3.0/bits/postypes.h:40,
+                 from /usr/local/Cellar/gcc/6.3.0_1/include/c++/6.3.0/iosfwd:40,
+                 from /usr/local/Cellar/gcc/6.3.0_1/include/c++/6.3.0/ios:38,
+                 from /usr/local/Cellar/gcc/6.3.0_1/include/c++/6.3.0/ostream:38,
+                 from /usr/local/Cellar/gcc/6.3.0_1/include/c++/6.3.0/iostream:39,
+                 from RtMidi.h:49,
+                 from RtMidi.cpp:39:
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:53:34: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithYear API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 0),
+                                  ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:53:34: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithYear API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 0),
+                                  ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:53:34: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithYear API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 0),
+                                  ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:53:34: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithYear API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 0),
+                                  ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:54:35: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithMonth API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 1),
+                                   ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:54:35: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithMonth API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 1),
+                                   ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:54:35: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithMonth API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 1),
+                                   ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:54:35: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithMonth API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 1),
+                                   ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:56:40: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithWeekOfYear API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 2),  // This includes the "W" prefix (e.g. "W49")
+                                        ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:56:40: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithWeekOfYear API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 2),  // This includes the "W" prefix (e.g. "W49")
+                                        ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:56:40: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithWeekOfYear API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 2),  // This includes the "W" prefix (e.g. "W49")
+                                        ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:56:40: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithWeekOfYear API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 2),  // This includes the "W" prefix (e.g. "W49")
+                                        ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:63:33: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithDay API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 4),
+                                 ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:63:33: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithDay API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 4),
+                                 ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:63:33: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithDay API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 4),
+                                 ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:63:33: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithDay API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 4),
+                                 ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:65:34: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 5),  // This uses the format "HH:mm:ss"
+                                  ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:65:34: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 5),  // This uses the format "HH:mm:ss"
+                                  ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:65:34: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 5),  // This uses the format "HH:mm:ss"
+                                  ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:65:34: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 5),  // This uses the format "HH:mm:ss"
+                                  ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:66:38: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithTimeZone API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 6),
+                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:66:38: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithTimeZone API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 6),
+                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:66:38: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithTimeZone API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 6),
+                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:66:38: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithTimeZone API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 6),
+                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:68:53: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithSpaceBetweenDateAndTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 7),  // Use space instead of "T"
+                                                     ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:68:53: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithSpaceBetweenDateAndTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 7),  // Use space instead of "T"
+                                                     ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:68:53: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithSpaceBetweenDateAndTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 7),  // Use space instead of "T"
+                                                     ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:68:53: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithSpaceBetweenDateAndTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 7),  // Use space instead of "T"
+                                                     ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:69:49: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithDashSeparatorInDate API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 8),  // Add separator for date ("-")
+                                                 ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:69:49: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithDashSeparatorInDate API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 8),  // Add separator for date ("-")
+                                                 ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:69:49: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithDashSeparatorInDate API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 8),  // Add separator for date ("-")
+                                                 ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:69:49: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithDashSeparatorInDate API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 8),  // Add separator for date ("-")
+                                                 ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:70:50: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithColonSeparatorInTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 9),  // Add separator for time (":")
+                                                  ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:70:50: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithColonSeparatorInTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 9),  // Add separator for time (":")
+                                                  ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:70:50: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithColonSeparatorInTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 9),  // Add separator for time (":")
+                                                  ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:70:50: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithColonSeparatorInTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 9),  // Add separator for time (":")
+                                                  ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:71:54: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithColonSeparatorInTimeZone API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 10),  // Add ":" separator in timezone (eg. +08:00)
+                                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:71:54: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithColonSeparatorInTimeZone API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 10),  // Add ":" separator in timezone (eg. +08:00)
+                                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:71:54: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithColonSeparatorInTimeZone API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 10),  // Add ":" separator in timezone (eg. +08:00)
+                                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:71:54: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithColonSeparatorInTimeZone API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = (1UL << 10),  // Add ":" separator in timezone (eg. +08:00)
+                                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:73:38: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithFullDate API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithYear | kCFISO8601DateFormatWithMonth | kCFISO8601DateFormatWithDay | kCFISO8601DateFormatWithDashSeparatorInDate,
+                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:73:38: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithFullDate API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithYear | kCFISO8601DateFormatWithMonth | kCFISO8601DateFormatWithDay | kCFISO8601DateFormatWithDashSeparatorInDate,
+                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:73:38: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithFullDate API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithYear | kCFISO8601DateFormatWithMonth | kCFISO8601DateFormatWithDay | kCFISO8601DateFormatWithDashSeparatorInDate,
+                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:73:38: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithFullDate API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithYear | kCFISO8601DateFormatWithMonth | kCFISO8601DateFormatWithDay | kCFISO8601DateFormatWithDashSeparatorInDate,
+                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:74:38: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithFullTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithTime | kCFISO8601DateFormatWithColonSeparatorInTime | kCFISO8601DateFormatWithTimeZone | kCFISO8601DateFormatWithColonSeparatorInTimeZone,
+                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:74:38: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithFullTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithTime | kCFISO8601DateFormatWithColonSeparatorInTime | kCFISO8601DateFormatWithTimeZone | kCFISO8601DateFormatWithColonSeparatorInTimeZone,
+                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:74:38: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithFullTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithTime | kCFISO8601DateFormatWithColonSeparatorInTime | kCFISO8601DateFormatWithTimeZone | kCFISO8601DateFormatWithColonSeparatorInTimeZone,
+                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:74:38: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithFullTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithTime | kCFISO8601DateFormatWithColonSeparatorInTime | kCFISO8601DateFormatWithTimeZone | kCFISO8601DateFormatWithColonSeparatorInTimeZone,
+                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:76:46: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithInternetDateTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithFullDate | kCFISO8601DateFormatWithFullTime,  // RFC3339
+                                              ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:76:46: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithInternetDateTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithFullDate | kCFISO8601DateFormatWithFullTime,  // RFC3339
+                                              ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:76:46: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithInternetDateTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithFullDate | kCFISO8601DateFormatWithFullTime,  // RFC3339
+                                              ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:76:46: error: 'introduced' was not declared in this scope
+     kCFISO8601DateFormatWithInternetDateTime API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) = kCFISO8601DateFormatWithFullDate | kCFISO8601DateFormatWithFullTime,  // RFC3339
+                                              ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:80:126: error: 'introduced' was not declared in this scope
+ CFDateFormatterRef CFDateFormatterCreateISO8601Formatter(CFAllocatorRef allocator, CFISO8601DateFormatOptions formatOptions) API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                                                                                              ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:80:126: error: 'introduced' was not declared in this scope
+ CFDateFormatterRef CFDateFormatterCreateISO8601Formatter(CFAllocatorRef allocator, CFISO8601DateFormatOptions formatOptions) API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                                                                                              ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:80:126: error: 'introduced' was not declared in this scope
+ CFDateFormatterRef CFDateFormatterCreateISO8601Formatter(CFAllocatorRef allocator, CFISO8601DateFormatOptions formatOptions) API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                                                                                              ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h:80:126: error: 'introduced' was not declared in this scope
+ CFDateFormatterRef CFDateFormatterCreateISO8601Formatter(CFAllocatorRef allocator, CFISO8601DateFormatOptions formatOptions) API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                                                                                              ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:777:39: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLLabelColorKey API_DEPRECATED("Use NSURLLabelColorKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:777:39: error: 'deprecated' was not declared in this scope
+ const CFStringRef kCFURLLabelColorKey API_DEPRECATED("Use NSURLLabelColorKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:777:39: error: 'message' was not declared in this scope
+ const CFStringRef kCFURLLabelColorKey API_DEPRECATED("Use NSURLLabelColorKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:777:39: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLLabelColorKey API_DEPRECATED("Use NSURLLabelColorKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:777:39: error: 'deprecated' was not declared in this scope
+ const CFStringRef kCFURLLabelColorKey API_DEPRECATED("Use NSURLLabelColorKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:777:39: error: 'message' was not declared in this scope
+ const CFStringRef kCFURLLabelColorKey API_DEPRECATED("Use NSURLLabelColorKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:777:39: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLLabelColorKey API_DEPRECATED("Use NSURLLabelColorKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:777:39: error: 'deprecated' was not declared in this scope
+ const CFStringRef kCFURLLabelColorKey API_DEPRECATED("Use NSURLLabelColorKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:777:39: error: 'message' was not declared in this scope
+ const CFStringRef kCFURLLabelColorKey API_DEPRECATED("Use NSURLLabelColorKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:777:39: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLLabelColorKey API_DEPRECATED("Use NSURLLabelColorKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:777:39: error: 'deprecated' was not declared in this scope
+ const CFStringRef kCFURLLabelColorKey API_DEPRECATED("Use NSURLLabelColorKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:777:39: error: 'message' was not declared in this scope
+ const CFStringRef kCFURLLabelColorKey API_DEPRECATED("Use NSURLLabelColorKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:785:42: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLEffectiveIconKey API_DEPRECATED("Use NSURLEffectiveIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                          ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:785:42: error: 'deprecated' was not declared in this scope
+ const CFStringRef kCFURLEffectiveIconKey API_DEPRECATED("Use NSURLEffectiveIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                          ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:785:42: error: 'message' was not declared in this scope
+ const CFStringRef kCFURLEffectiveIconKey API_DEPRECATED("Use NSURLEffectiveIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                          ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:785:42: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLEffectiveIconKey API_DEPRECATED("Use NSURLEffectiveIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                          ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:785:42: error: 'deprecated' was not declared in this scope
+ const CFStringRef kCFURLEffectiveIconKey API_DEPRECATED("Use NSURLEffectiveIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                          ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:785:42: error: 'message' was not declared in this scope
+ const CFStringRef kCFURLEffectiveIconKey API_DEPRECATED("Use NSURLEffectiveIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                          ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:785:42: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLEffectiveIconKey API_DEPRECATED("Use NSURLEffectiveIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                          ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:785:42: error: 'deprecated' was not declared in this scope
+ const CFStringRef kCFURLEffectiveIconKey API_DEPRECATED("Use NSURLEffectiveIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                          ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:785:42: error: 'message' was not declared in this scope
+ const CFStringRef kCFURLEffectiveIconKey API_DEPRECATED("Use NSURLEffectiveIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                          ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:785:42: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLEffectiveIconKey API_DEPRECATED("Use NSURLEffectiveIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                          ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:785:42: error: 'deprecated' was not declared in this scope
+ const CFStringRef kCFURLEffectiveIconKey API_DEPRECATED("Use NSURLEffectiveIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                          ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:785:42: error: 'message' was not declared in this scope
+ const CFStringRef kCFURLEffectiveIconKey API_DEPRECATED("Use NSURLEffectiveIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                          ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:789:39: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLCustomIconKey API_DEPRECATED("Use NSURLCustomIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:789:39: error: 'deprecated' was not declared in this scope
+ const CFStringRef kCFURLCustomIconKey API_DEPRECATED("Use NSURLCustomIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:789:39: error: 'message' was not declared in this scope
+ const CFStringRef kCFURLCustomIconKey API_DEPRECATED("Use NSURLCustomIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:789:39: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLCustomIconKey API_DEPRECATED("Use NSURLCustomIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:789:39: error: 'deprecated' was not declared in this scope
+ const CFStringRef kCFURLCustomIconKey API_DEPRECATED("Use NSURLCustomIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:789:39: error: 'message' was not declared in this scope
+ const CFStringRef kCFURLCustomIconKey API_DEPRECATED("Use NSURLCustomIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:789:39: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLCustomIconKey API_DEPRECATED("Use NSURLCustomIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:789:39: error: 'deprecated' was not declared in this scope
+ const CFStringRef kCFURLCustomIconKey API_DEPRECATED("Use NSURLCustomIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:789:39: error: 'message' was not declared in this scope
+ const CFStringRef kCFURLCustomIconKey API_DEPRECATED("Use NSURLCustomIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:789:39: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLCustomIconKey API_DEPRECATED("Use NSURLCustomIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:789:39: error: 'deprecated' was not declared in this scope
+ const CFStringRef kCFURLCustomIconKey API_DEPRECATED("Use NSURLCustomIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:789:39: error: 'message' was not declared in this scope
+ const CFStringRef kCFURLCustomIconKey API_DEPRECATED("Use NSURLCustomIconKey", macosx(10.6, 10.12), ios(4.0, 10.0), watchos(2.0, 3.0), tvos(9.0, 10.0));
+                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:833:42: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLCanonicalPathKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                          ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:833:42: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLCanonicalPathKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                          ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:833:42: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLCanonicalPathKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                          ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:833:42: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLCanonicalPathKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                          ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1046:46: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeIsEncryptedKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                              ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1046:46: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeIsEncryptedKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                              ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1046:46: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeIsEncryptedKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                              ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1046:46: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeIsEncryptedKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                              ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1050:51: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeIsRootFileSystemKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                   ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1050:51: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeIsRootFileSystemKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                   ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1050:51: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeIsRootFileSystemKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                   ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1050:51: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeIsRootFileSystemKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                   ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1054:54: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeSupportsCompressionKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1054:54: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeSupportsCompressionKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1054:54: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeSupportsCompressionKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1054:54: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeSupportsCompressionKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1058:54: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeSupportsFileCloningKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1058:54: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeSupportsFileCloningKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1058:54: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeSupportsFileCloningKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1058:54: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeSupportsFileCloningKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                      ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1062:55: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeSupportsSwapRenamingKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1062:55: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeSupportsSwapRenamingKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1062:55: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeSupportsSwapRenamingKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1062:55: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeSupportsSwapRenamingKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                       ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1066:60: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeSupportsExclusiveRenamingKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                            ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1066:60: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeSupportsExclusiveRenamingKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                            ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1066:60: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeSupportsExclusiveRenamingKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                            ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:1066:60: error: 'introduced' was not declared in this scope
+ const CFStringRef kCFURLVolumeSupportsExclusiveRenamingKey API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0));
+                                                            ^
+In file included from /System/Library/Frameworks/CoreMIDI.framework/Headers/CoreMIDI.h:18:0,
+                 from RtMidi.cpp:386:
+/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIServices.h:300:2: error: expected unqualified-id before '^' token
+ (^MIDINotifyBlock)(const MIDINotification *message);
+  ^
+/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIServices.h:300:2: error: expected ')' before '^' token
+/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIServices.h:343:2: error: expected unqualified-id before '^' token
+ (^MIDIReadBlock)(const MIDIPacketList *pktlist, void * __nullable srcConnRefCon);
+  ^
+/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIServices.h:343:2: error: expected ')' before '^' token
+In file included from /System/Library/Frameworks/CoreMIDI.framework/Headers/CoreMIDI.h:18:0,
+                 from RtMidi.cpp:386:
+/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIServices.h:1154:6: error: 'MIDINotifyBlock' has not been declared
+      MIDINotifyBlock __nullable notifyBlock )   __OSX_AVAILABLE_STARTING(__MAC_10_11, __IPHONE_9_0);
+      ^~~~~~~~~~~~~~~
+/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIServices.h:1240:9: error: 'MIDIReadBlock' has not been declared
+         MIDIReadBlock readBlock ) __OSX_AVAILABLE_STARTING(__MAC_10_11, __IPHONE_9_0);
+         ^~~~~~~~~~~~~
+/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIServices.h:1643:9: error: 'MIDIReadBlock' has not been declared
+         MIDIReadBlock   readBlock ) __OSX_AVAILABLE_STARTING(__MAC_10_11, __IPHONE_9_0);
+         ^~~~~~~~~~~~~
+make: *** [RtMidi.o] Error 1
