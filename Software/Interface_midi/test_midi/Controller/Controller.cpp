@@ -11,9 +11,9 @@ Controller::Controller(unsigned char id_physical,
 	// Contructeur par defaut
 }
 
-Controller::Controller(unsigned char const id)
+Controller::Controller(string const filename)
 {
-	loadController(id);
+	loadController(filename);
 }
 
 Controller::~Controller()
@@ -95,6 +95,10 @@ bool Controller::loadController(string const filename)
 {
 	ifstream flux(filename);
 
+	#ifdef DEBUG
+		cout << "Attempt to load from [" << filename << "]" << endl;
+	#endif // DEBUG
+
 	if(flux)
 	{
 		string ligne;
@@ -111,12 +115,19 @@ bool Controller::loadController(string const filename)
 			{
 				pos  = ligne.find("/");
 				infos[i] = ligne.substr(0, pos);
+				#ifdef DEBUG
+					cout << "ligne = " << ligne << endl;
+					cout << "infos[i] = " << infos[i] << endl;
+				#endif // DEBUG
 				ligne    = ligne.substr(pos + 1, taille - 1);
 			}
 		}
 
-		m_id_phys  = stoi(infos[0]);
-		m_id_funct = stoi(infos[1]);
+		// stoul pour convertir en unsigned long, puis cast en (unsigned char)
+		// l'utilisation de uChar directement prends le caractère associé, 
+		// pas la valeur de l'octet
+		m_id_phys  = (unsigned char)stoul(infos[0], 0, 16);
+		m_id_funct = (unsigned char)stoul(infos[1], 0, 16);
 		m_type	   = string_to_type(infos[2]);
 
 		cout << "LOADED : " << *this << " from " << filename << endl;
@@ -202,6 +213,8 @@ ostream &operator<<(ostream &flux, Controller const &c)
 	return flux;
 }
 
+// Fonctions Diverses -----------------------------------------------
+
 string uChar_to_hex(unsigned char i)
 {
 	stringstream stream;
@@ -212,3 +225,4 @@ string uChar_to_hex(unsigned char i)
 		stream << hex << uppercase << (int)i << nouppercase;
 	return stream.str();
 }
+

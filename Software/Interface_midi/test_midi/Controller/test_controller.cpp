@@ -15,6 +15,9 @@ int main()
 
 	c1.saveController();
 
+	Controller c2("0x01.mod");
+	cout << c2 << endl; 
+
 }
 
 // Notes : 

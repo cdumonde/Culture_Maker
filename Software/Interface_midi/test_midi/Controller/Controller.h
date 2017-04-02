@@ -10,6 +10,8 @@
 //#include <iomanip> // setfill, setw
 #include <sstream> // stringstream
 
+//#define DEBUG
+
 enum CONTROLLER_TYPE
 {
 	// Type de module
@@ -29,7 +31,7 @@ public:
 	Controller(unsigned char const id_physical = 0, 
 			unsigned char const id_function    = 0, 
 			CONTROLLER_TYPE type               = UNKNOWN);
-	Controller(unsigned char const id);
+	Controller(std::string const filename);
 	~Controller();
 
 	// Afficheurs
