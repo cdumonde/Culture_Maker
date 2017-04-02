@@ -3,10 +3,12 @@
 #ifndef Controller_H
 #define Controller_H
 
-#include <fstream>
-#include <iostream>
-#include <string>
+#include <fstream> // File manipulation
+#include <iostream>// cout, cin, cerr
+#include <string>  // string declaration & manipulation
 #include <cstdlib>
+//#include <iomanip> // setfill, setw
+#include <sstream> // stringstream
 
 enum CONTROLLER_TYPE
 {
@@ -38,8 +40,8 @@ public:
 	unsigned char get_id_phys(void) const;
 	unsigned char get_id_funct(void) const;
 	CONTROLLER_TYPE get_type(void) const;
-	unsigned char Controller::get_velocity(void) const;
-	unsigned char Controller::get_value(void) const;
+	unsigned char get_velocity(void) const;
+	unsigned char get_value(void) const;
 
 	// Mutateurs
 	void set_id_phys(unsigned char const &id);
@@ -66,10 +68,12 @@ private:
 	// Méthodes privées diverses
 	std::string type_to_string(void) const;
 	CONTROLLER_TYPE string_to_type(std::string strtype) const;
-	unsigned char type_to_uChar(void) const;
 };
 
 // Operateurs
 std::ostream &operator<<(std::ostream &flux, Controller const &c);
+
+// Fonctions Diverses
+std::string uChar_to_hex(unsigned char i); // A mettre dans un ib de fonction ?
 
 #endif // Controller_H

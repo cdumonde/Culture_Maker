@@ -18,5 +18,11 @@ all: $(EXEC)
 interface_midi: $(OBJ)
 	$(CXX) -o $@ $^ $(LDFLAGS) $(CXXFLAGS)
 
+test_controller:
+	g++ -Wall -O3 -std=c++11 -o test_midi/Controller/test_controller test_midi/Controller/test_controller.cpp test_midi/Controller/Controller.cpp;
+
 clean:
 	rm -rf *.o
+
+clean_config:
+	rm ./test_midi/Controller/*.mod
