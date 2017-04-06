@@ -1,4 +1,8 @@
 // Clovis Durand
+// ENSEIRB-Matmeca, E2
+// Culture Maker - MIDI controller project
+
+// Controller class definition - Source file
 
 #include "Controller.h"
 using namespace std;

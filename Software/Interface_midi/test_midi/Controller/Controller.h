@@ -1,4 +1,9 @@
 // Clovis Durand
+// ENSEIRB-Matmeca, E2
+// Culture Maker - MIDI controller project
+
+
+// Controller class definition - Header file
 
 #ifndef Controller_H
 #define Controller_H
