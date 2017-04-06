@@ -7,7 +7,6 @@
 #include <iostream>// cout, cin, cerr
 #include <string>  // string declaration & manipulation
 #include <cstdlib>
-//#include <iomanip> // setfill, setw
 #include <sstream> // stringstream
 
 //#define DEBUG
@@ -20,41 +19,41 @@ enum CONTROLLER_TYPE
 	PIEZO,			// Piezoelectric button
 	POTENTIOMETER,
 	IR_SENSOR,
-	ENCODER, 		// wtf ?!?
+	ENCODER, 		
 	UNKNOWN 		// Default type
 };
 
 class Controller
 {
 public:
-	// Con/Destructeurs
+	// Con/Destructors
 	Controller(unsigned char const id_physical = 0, 
 			unsigned char const id_function    = 0, 
 			CONTROLLER_TYPE type               = UNKNOWN);
 	Controller(std::string const filename);
 	~Controller();
 
-	// Afficheurs
+	// Printers
 	std::string infosController(void) const; 
 	void print_Controller(void) const;
 
-	// Accesseurs
+	// Getters
 	unsigned char get_id_phys(void) const;
 	unsigned char get_id_funct(void) const;
 	CONTROLLER_TYPE get_type(void) const;
 	unsigned char get_velocity(void) const;
 	unsigned char get_value(void) const;
 
-	// Mutateurs
+	// Setters
 	void set_id_phys(unsigned char const &id);
 	void set_id_funct(unsigned char const &id);
 	void set_type(CONTROLLER_TYPE const &type);
 	void set_velocity(unsigned char const &velocity);
 	void set_value(unsigned char const &value);
 
-	// Pré-Operateurs
+	// Pre-Operators
 
-	// Méthodes publiques diverses
+	// Misc. Public Methods
 
 	// File management
 	bool loadController(unsigned char const &id);
@@ -62,20 +61,20 @@ public:
 	bool saveController(void) const;
 
 private:
-	// Attributs
-	unsigned char m_id_phys, m_id_funct; 	// IDs du module concerné
-	CONTROLLER_TYPE m_type; 					// Type de module concerné
-	unsigned char m_velocity, m_value;		// Action sur le module concerné
+	// Member variables
+	unsigned char m_id_phys, m_id_funct; 	// IDs of module
+	CONTROLLER_TYPE m_type; 				// Type of module
+	unsigned char m_velocity, m_value;		// Values of the module
 
-	// Méthodes privées diverses
+	// Misc. private methods
 	std::string type_to_string(void) const;
 	CONTROLLER_TYPE string_to_type(std::string strtype) const;
 };
 
-// Operateurs
+// Operators
 std::ostream &operator<<(std::ostream &flux, Controller const &c);
 
-// Fonctions Diverses
-std::string uChar_to_hex(unsigned char i); // A mettre dans un ib de fonction ?
+// Misc. functions
+std::string uChar_to_hex(unsigned char i);
 
 #endif // Controller_H

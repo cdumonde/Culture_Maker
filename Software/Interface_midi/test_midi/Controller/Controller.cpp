@@ -3,12 +3,12 @@
 #include "Controller.h"
 using namespace std;
 
-// Con/Destructeurs -------------------------------------------------
+// Con/Destructors -------------------------------------------------
 Controller::Controller(unsigned char id_physical, 
-				 unsigned char id_function, 
-				 CONTROLLER_TYPE type): m_id_phys(id_physical), m_id_funct(id_function), m_type(type)
+				       unsigned char id_function, 
+				       CONTROLLER_TYPE type): m_id_phys(id_physical), m_id_funct(id_function), m_type(type)
 {
-	// Contructeur par defaut
+	// Dafault Controller
 }
 
 Controller::Controller(string const filename)
@@ -18,17 +18,16 @@ Controller::Controller(string const filename)
 
 Controller::~Controller()
 {
-	// Destructeur
+	// Default Destructor
 }
 
-// Afficheurs -------------------------------------------------------
+// Printers ---------------------------------------------------------
 string Controller::infosController(void) const
 {
 	return uChar_to_hex(get_id_phys()) + "/" + uChar_to_hex(get_id_funct()) + "/" + type_to_string();
 }
-//void print_Controller(void) const;
 
-// Accesseurs -------------------------------------------------------
+// Getters ----------------------------------------------------------
 unsigned char Controller::get_id_phys(void) const
 {
 	return m_id_phys;
@@ -44,11 +43,6 @@ CONTROLLER_TYPE Controller::get_type(void) const
 	return m_type;
 }
 
-/*unsigned int Controller::get_type_uInt(void) const
-{
-	return m_type;
-}*/
-
 unsigned char Controller::get_velocity(void) const
 {
 	return m_velocity;
@@ -59,7 +53,7 @@ unsigned char Controller::get_value(void) const
 	return m_value;
 }
 
-// Mutateurs ---------------------------------------------------------
+// Setters ----------------------------------------------------------
 void Controller::set_id_phys(unsigned char const &id)
 {
 	m_id_phys = id;
@@ -123,9 +117,8 @@ bool Controller::loadController(string const filename)
 			}
 		}
 
-		// stoul pour convertir en unsigned long, puis cast en (unsigned char)
-		// l'utilisation de uChar directement prends le caractère associé, 
-		// pas la valeur de l'octet
+		// stoul to convert to an unsigned long, and then cast to unsigned char
+		// because uChar takes the associated caracter, not the exact value
 		m_id_phys  = (unsigned char)stoul(infos[0], 0, 16);
 		m_id_funct = (unsigned char)stoul(infos[1], 0, 16);
 		m_type	   = string_to_type(infos[2]);
@@ -143,8 +136,7 @@ bool Controller::loadController(string const filename)
 bool Controller::saveController(void) const
 {
 	string filename = uChar_to_hex(m_id_phys) + ".mod";
-	ofstream flux(filename.c_str(), ios::trunc); // ofstream o comme output
-	//Déclaration d'un flux permettant d'écrire dans un fichier.
+	ofstream flux(filename.c_str(), ios::trunc);
 	//ios::app = seek the end of file before you write
 	//ios::trunc = discard the contents of the stream when opening
 
@@ -165,28 +157,31 @@ bool Controller::saveController(void) const
 	}
 }
 
-// Méthodes privées diverses ----------------------------------------
+// Misc. private methods --------------------------------------------
 string Controller::type_to_string(void) const
-// Renvoie un string decrivant le type de controlleur
+// Returns a string corresponding to the m_type of the controller
 {
-	if (m_type == 0)
-		return "BUTTON";
-	else if (m_type == 1)
-		return "SLIDER";
-	else if (m_type == 2)
-		return "PIEZO";
-	else if (m_type == 3)
-		return "POTENTIOMETER";
-	else if (m_type == 4)
-		return "IR_SENSOR";
-	else if (m_type == 5)
-		return "ENCODER";
-	else
-		return "UNKNOWN";
+	switch (m_type)
+	{
+		case BUTTON:
+			return "BUTTON";
+		case SLIDER:
+			return "SLIDER";
+		case PIEZO:
+			return "PIEZO";
+		case POTENTIOMETER:
+			return "POTENTIOMETER";
+		case IR_SENSOR:
+			return "IR_SENSOR";
+		case ENCODER:
+			return "ENCODER";
+		case default:
+			return "UNKNOWN";
+	}
 }
 
 CONTROLLER_TYPE Controller::string_to_type(string strtype) const
-// Renvoie le bon type en fonction d'un string correspondant
+// Returns the correct type corresponding with the input string type. 
 {
 	if (strtype == "BUTTON")
 		return BUTTON;
@@ -200,20 +195,20 @@ CONTROLLER_TYPE Controller::string_to_type(string strtype) const
 		return IR_SENSOR;
 	else if (strtype == "ENCODER")
 		return ENCODER;
-	else // strtype non correcpondant ou strtype == "UNKNOWN"
+	else // non corresponding strtypr or strtype == "UNKNOWN"
 		return UNKNOWN;
 }
 
 
 
-// Operateurs -------------------------------------------------------
+// Operators -------------------------------------------------------
 ostream &operator<<(ostream &flux, Controller const &c)
 {
 	flux << c.infosController();
 	return flux;
 }
 
-// Fonctions Diverses -----------------------------------------------
+// Misc. functions --------------------------------------------------
 
 string uChar_to_hex(unsigned char i)
 {

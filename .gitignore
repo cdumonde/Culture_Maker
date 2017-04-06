@@ -1,2 +1,10 @@
 *.o
+<<<<<<< Updated upstream
 *.exe
+=======
+<<<<<<< HEAD
+Software/interface_graphique/extra_fonts/DroidSans.ttf
+=======
+*.exe
+>>>>>>> origin/master
+>>>>>>> Stashed changes
