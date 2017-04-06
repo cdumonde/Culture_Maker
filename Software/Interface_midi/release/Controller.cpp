@@ -175,25 +175,6 @@ bool Controller::saveController(void) const
 	}
 }
 
-// Provides human-readable strings for the CONTROLLER_TYPE type
-string Controller::type_to_string(void) const
-{
-	if (m_type == 0)
-		return "BUTTON";
-	else if (m_type == 1)
-		return "SLIDER";
-	else if (m_type == 2)
-		return "PIEZO";
-	else if (m_type == 3)
-		return "POTENTIOMETER";
-	else if (m_type == 4)
-		return "IR_SENSOR";
-	else if (m_type == 5)
-		return "ENCODER";
-	else
-		return "UNKNOWN";
-}
-
 // Overloaded << operator for data output
 ostream &operator<<(ostream &flux, Controller const &c)
 {

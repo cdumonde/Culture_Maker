@@ -3,26 +3,11 @@
 #ifndef Controller_H
 #define Controller_H
 
-#include <fstream> // File manipulation
-#include <iostream>// cout, cin, cerr
-#include <string>  // string declaration & manipulation
+#include <fstream>
+#include <iostream>
+#include <string>
 #include <cstdlib>
-//#include <iomanip> // setfill, setw
-#include <sstream> // stringstream
-
-//#define DEBUG
-
-enum CONTROLLER_TYPE
-{
-	// Type de module
-	BUTTON,
-	SLIDER,
-	PIEZO,			// Piezoelectric button
-	POTENTIOMETER,
-	IR_SENSOR,
-	ENCODER, 		// wtf ?!?
-	UNKNOWN 		// Default type
-};
+#include <sstream>
 
 class Controller
 {
