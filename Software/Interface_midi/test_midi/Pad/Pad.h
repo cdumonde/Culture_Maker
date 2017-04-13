@@ -1,8 +1,10 @@
 #ifndef PAD_H
 #define PAD_H
 
+#include <vector>
+
 #include "RtMidi.h"
-#include "Control.h"
+#include "Controller.h"
 
 enum TYPE 
 {
@@ -32,9 +34,13 @@ enum TYPE
 class Pad {
 
 public:
-
+    Pad(int height = 1, int width = 1);
+    void set_function()
 private:
-    RtMidi
+    RtMidiIn message_in;
+    RtMidiOut message_out;
+    std::vector<Controller> control;
+    int height, width;
 };
 
 #endif //PAD_H
