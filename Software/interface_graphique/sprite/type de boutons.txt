@@ -1,0 +1,8 @@
+Poussoir
+Joystick
+Slider
+Piezzo
+Potentiometre
+Infra rouge
+Encodeur
+Unknown

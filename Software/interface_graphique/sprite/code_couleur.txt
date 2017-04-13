@@ -1,0 +1,5 @@
+yellow f0ff54ff
+green 4ff67cff
+blue 00a8ffff
+red d42710ff
+orange ff8600ff
