@@ -6,12 +6,12 @@ using namespace std;
 
 int main()
 {
-    string caractere;
-    setlocale(LC_ALL, "fr-FR. UTF-8");
     Fonction funct(SHORTCUT);
-    while(1)
-    {
-        cin >> caractere;
-        cout << (int)caractere[0] << endl;
-    }
+    
+    funct.set_function(SHORTCUT, "Ctrl+Alt+Delete");
+
+    sleep(5);
+    cout << XKeysymToString(XK_Delete) << endl;
+    funct.exec_funct();
+    return 1;
 }
