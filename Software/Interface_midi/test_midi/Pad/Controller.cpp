@@ -21,10 +21,10 @@
 using namespace std;
 
 // Default constructor
-Controller::Controller(unsigned char id_physical, unsigned char id_function, CONTROLLER_TYPE type)
+Controller::Controller(unsigned char id_physical, FONCTION_TYPE function, CONTROLLER_TYPE type)
 {
+	m_funct = new Fonction(function);
     set_id_phys(id_physical);
-    set_id_funct(id_function);
     set_type(type);
 }
 
@@ -33,22 +33,21 @@ Controller::Controller(string const filename)
 {
 	loadController(filename);
 }
-
 // Destructor
 Controller::~Controller()
 {
-
+	delete m_funct;
 }
 
-// Accessors
+// Getters
 unsigned char Controller::get_id_phys(void) const
 {
 	return m_id_phys;
 }
 
-unsigned char Controller::get_id_funct(void) const
+FONCTION_TYPE Controller::get_id_funct(void) const
 {
-	return m_id_funct;
+	return m_funct->get_function();
 }
 
 unsigned char Controller::get_velocity(void) const
@@ -66,106 +65,97 @@ CONTROLLER_TYPE Controller::get_type(void) const
 	return m_type;
 }
 
-// Mutators
-void Controller::set_id_phys(unsigned char const &id)
+// Setters
+void Controller::set_id_phys(unsigned char const id)
 {
 	m_id_phys = id;
 }
-void Controller::set_id_funct(unsigned char const &id)
+bool Controller::set_function(FONCTION_TYPE funct, std::string shortcut)
 {
-	m_id_funct = id;
+	return m_funct->set_function(funct, shortcut);
 }
-
-void Controller::set_velocity(unsigned char const &velocity)
+bool Controller::set_function(FONCTION_TYPE funct, NOTE note, char hauteur)
+{
+	return m_funct->set_function(funct, note, hauteur);
+}
+bool Controller::set_function(FONCTION_TYPE funct, ADVANCED_FUNCTION f)
+{
+	return m_funct->set_function(funct, f);
+}
+void Controller::set_velocity(unsigned char const velocity)
 {
 	m_velocity = velocity;
 }
-
-void Controller::set_value(unsigned char const &value)
+void Controller::set_value(unsigned char const value)
 {
 	m_value = value;
 }
-
-void Controller::set_type(CONTROLLER_TYPE const &type)
+void Controller::set_type(CONTROLLER_TYPE const type)
 {
 	m_type = type;
 }
-
 // Loads the controller settings from a file.
-bool Controller::loadController(string const filename)
+bool Controller::loadController(const string filename)
 {
-	ifstream flux(filename);
+	ifstream flux(filename.c_str());
 
 	#ifdef DEBUG
 		cout << "Attempt to load from [" << filename << "]" << endl;
 	#endif // DEBUG
 
-	if(flux)
+	if(flux.is_open())
 	{
-		string ligne;
-		getline(flux, ligne);
-		flux.close();
-
-		string infos[3];
-		unsigned int pos, taille;
-
+		char c;
 		for (int i = 0; i < 3; i++)
 		{
-			taille = ligne.size();
-			if (taille != 0)
+			c = flux.get();
+			switch(i)
 			{
-				pos  = ligne.find("/");
-				infos[i] = ligne.substr(0, pos);
-				#ifdef DEBUG
-					cout << "ligne = " << ligne << endl;
-					cout << "infos[i] = " << infos[i] << endl;
-				#endif // DEBUG
-				ligne    = ligne.substr(pos + 1, taille - 1);
-			}
+				case 0:
+				m_funct->set_function((FONCTION_TYPE)c);
+				break;
+				case 1:
+				m_id_phys = (unsigned char)c;
+				break;
+				default:
+				m_type = (CONTROLLER_TYPE)c;
+				break;
+			}	
 		}
-
-		// stoul pour convertir en unsigned long, puis cast en (unsigned char)
-		// l'utilisation de uChar directement prends le caractère associé, 
-		// pas la valeur de l'octet
-		m_id_phys  = (unsigned char)stoul(infos[0], 0, 16);
-		m_id_funct = (unsigned char)stoul(infos[1], 0, 16);
-		m_type	   = string_to_type(infos[2]);
-
 		cout << "LOADED : " << *this << " from " << filename << endl;
 	}
 	else
 	{
 		cerr << "ERROR  : Cannot open file [" << filename << "] (read mode)." << endl;
-		return 1;
+		return false;
 	}
-	return 0;
+	return true;
 }
-
 // Loads the controller settings from a file directly by its id.
-bool Controller::loadController(unsigned char const &id)
+bool Controller::loadController(unsigned char const id)
 {
-	string filename = id + ".mod";
-	return loadController(filename);
+	stringstream filename;
+	filename << m_id_phys << ".mod";
+	return loadController(filename.str());
 }
-
 // Save controller settings
 bool Controller::saveController(void) const
 {
-	string filename = m_id_phys + ".mod";
+	stringstream filename;
+	filename << m_id_phys << ".mod";
     
     // Opening file in truncate mode
-	ofstream flux(filename.c_str(), ios::trunc);
-
-    // Reading controller settings
-	string infos = infosController();
-
+	ofstream flux(filename.c_str());
+	
     // Writing output
-	if(flux)
+	if(flux.is_open())
 	{
-		flux << infos;
+		char funct = (char)m_funct->get_function();
+		char type = (char)m_type;
+		flux.write(&funct, 1);
+		flux.write(&m_id_phys, 1);
+		flux.write(&type, 1);
 		flux.close();
-		cout << "WROTE  : " << infos << " in " << filename << endl;
-
 		return 0;
 	}
 	else
@@ -174,12 +164,60 @@ bool Controller::saveController(void) const
 		return 1;
 	}
 }
-
 // Overloaded << operator for data output
-ostream &operator<<(ostream &flux, Controller const &c)
+ostream &operator<<(ostream &flux, const Controller &c)
 {
 	flux << c.infosController();
 	return flux;
 }
+string Controller::infosController() const
+{
+	stringstream ss;
+	ss << "ID : " << (int)m_id_phys << endl;
+	switch(m_type)
+	{
+		case BUTTON:
+		ss << "Type : Button" << endl;
+		break;
+		case JOYSTICK:
+		ss << "Type : Joystick" << endl;
+		break;
+		case SLIDER:
+		ss << "Type : Slider" << endl;
+		break;
+		case PIEZO:
+		ss << "Type : Piezo" << endl;
+		break;
+		case POTENTIOMETER:
+		ss << "Type : Potentiometer" << endl;
+		break;
+		case IR_SENSOR:
+		ss << "Type : Infrared sensor" << endl;
+		break;
+		case ENCODER:
+		ss << "Type : Encoder" << endl;
+		break;
+		default:
+		ss << "Type : Unknown" << endl;
+		break;
+	}
+	switch(m_funct->get_function())
+	{
+		case MIDI:
+		ss << "Function : Midi" << endl;
+		break;
+		case SHORTCUT:
+		ss << "Function : Shortcut" << endl;
+		break;
+		default:
+		ss << "Function : Custom" << endl;
+		break;
+	}
+	return ss.str();
+}
 
+char Controller::exec_funct()
+{
+	return m_funct->exec_funct();
+}
 

@@ -5,7 +5,6 @@
 #include <string>
 #include "Types.h"
 #ifdef __linux__
-#include <X11/keysym.h>
 //Lib bug
 extern "C" {
 #include <xdo.h>
@@ -24,9 +23,11 @@ public:
     Fonction(FONCTION_TYPE funct = MIDI);
     ~Fonction();
 
-    bool set_function(FONCTION_TYPE funct, std::string shorcut);
+    bool set_function(FONCTION_TYPE funct, std::string shortcut);
     bool set_function(FONCTION_TYPE funct, NOTE note, char hauteur);
     bool set_function(FONCTION_TYPE funct, ADVANCED_FUNCTION f);
+    bool set_function(FONCTION_TYPE funct);
+    FONCTION_TYPE get_function(); 
     char exec_funct();
 
 private:

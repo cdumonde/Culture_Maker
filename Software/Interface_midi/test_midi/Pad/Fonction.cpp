@@ -1,3 +1,21 @@
+/* This file is part of the Culture_Maker project,
+*  It defines the behavior of the midi controller function.
+*  Copyright (C) 2017 by Cedric Dumondelle
+*
+*  This program is free software: you can redistribute it and/or modify
+*  it under the terms of the GNU General Public License as published by
+*  the Free Software Foundation, either version 3 of the License, or
+*  (at your option) any later version.
+*
+*  This program is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*  GNU General Public License for more details.
+
+*  You should have received a copy of the GNU General Public License
+*  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
 #include "Fonction.h"
 #include "Types.h"
 
@@ -9,6 +27,11 @@ Fonction::~Fonction()
 {
 
 }
+bool Fonction::set_function(FONCTION_TYPE funct)//DEFAULT
+{
+    m_funct = funct;
+    return true;
+}
 bool Fonction::set_function(FONCTION_TYPE funct, std::string shortcut)//SHORTCUT
 {
     m_funct = funct;
@@ -18,7 +41,6 @@ bool Fonction::set_function(FONCTION_TYPE funct, std::string shortcut)//SHORTCUT
         return true;
     }
     return false;
-
 }
 bool Fonction::set_function(FONCTION_TYPE funct, NOTE note, char hauteur)//MIDI
 {
@@ -44,22 +66,10 @@ bool Fonction::set_function(FONCTION_TYPE funct, ADVANCED_FUNCTION f)//CUSTOM
 }
 char Fonction::exec_funct()
 {
-    std::vector<std::string> cmd;
-    size_t pos = 0, pos_1 = 0;
-    while(pos != m_shortcut.npos)
-    {
-        pos = m_shortcut.find("+", pos_1);
-        cmd.push_back(m_shortcut.substr(pos_1, pos));
-        if(pos != m_shortcut.npos)
-        {
-            pos_1 = pos +1;
-        }
-    }
-    std::cout << "SIZE : " << cmd.size() << std::endl;
     #ifdef __linux__
     xdo_t *window = xdo_new(NULL);
     #elif _WIN32
-
+    //TODO
     #endif
     switch (m_funct)
     {
@@ -78,4 +88,8 @@ char Fonction::exec_funct()
         break;
     }
     return 0;
+}
+FONCTION_TYPE Fonction::get_function()
+{
+    return m_funct;
 }
