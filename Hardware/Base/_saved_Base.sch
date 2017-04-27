@@ -43,54 +43,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L 74LS353 U?
-U 1 1 58EF2C3F
-P 2050 1550
-F 0 "U?" H 2050 1850 50  0000 C CNN
-F 1 "74LS353" H 2050 1700 50  0000 C CNN
-F 2 "" H 2050 1550 50  0000 C CNN
-F 3 "" H 2050 1550 50  0000 C CNN
-	1    2050 1550
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74LS353 U?
-U 1 1 58EF2C6E
-P 2050 3150
-F 0 "U?" H 2050 3450 50  0000 C CNN
-F 1 "74LS353" H 2050 3300 50  0000 C CNN
-F 2 "" H 2050 3150 50  0000 C CNN
-F 3 "" H 2050 3150 50  0000 C CNN
-	1    2050 3150
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74LS353 U?
-U 1 1 5901881A
-P 2050 4750
-F 0 "U?" H 2050 5050 50  0000 C CNN
-F 1 "74LS353" H 2050 4900 50  0000 C CNN
-F 2 "" H 2050 4750 50  0000 C CNN
-F 3 "" H 2050 4750 50  0000 C CNN
-	1    2050 4750
-	1    0    0    -1  
-$EndComp
-Text Label 2800 1050 0    60   ~ 0
-D0
-Text Label 2800 1700 0    60   ~ 0
-D1
-$Comp
-L 74LS353 U?
-U 1 1 590190D3
-P 5400 3450
-F 0 "U?" H 5400 3750 50  0000 C CNN
-F 1 "74LS353" H 5400 3600 50  0000 C CNN
-F 2 "" H 5400 3450 50  0000 C CNN
-F 3 "" H 5400 3450 50  0000 C CNN
-	1    5400 3450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2800 1050 4200 1050
 Wire Wire Line
@@ -158,10 +110,6 @@ F 3 "" H 2050 4750 50  0000 C CNN
 	1    2050 4750
 	1    0    0    -1  
 $EndComp
-Text Label 2800 1050 0    60   ~ 0
-D0
-Text Label 2800 1700 0    60   ~ 0
-D1
 $Comp
 L 74LS353 U?
 U 1 1 59019BDB
@@ -179,8 +127,6 @@ U 59019E57
 F0 "Connectors" 60
 F1 "conn.sch" 60
 $EndSheet
-Text Label 1300 1500 2    60   ~ 0
-D1_1X1
 Text Label 1300 950  2    60   ~ 0
 D0_1X2
 Text Label 1300 1050 2    60   ~ 0
@@ -243,4 +189,32 @@ Text Label 1300 2150 2    60   ~ 0
 A_C_0
 Text Label 1300 2250 2    60   ~ 0
 A_C_1
+Text Label 1300 1500 2    60   ~ 0
+D1_1X1
+Text Label 6150 2950 0    60   ~ 0
+D0
+Text Label 6150 3600 0    60   ~ 0
+D1
+$Comp
+L GND #PWR?
+U 1 1 590320A9
+P 4650 3050
+F 0 "#PWR?" H 4650 2800 50  0001 C CNN
+F 1 "GND" H 4650 2900 50  0000 C CNN
+F 2 "" H 4650 3050 50  0000 C CNN
+F 3 "" H 4650 3050 50  0000 C CNN
+	1    4650 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 590320C5
+P 4650 3700
+F 0 "#PWR?" H 4650 3450 50  0001 C CNN
+F 1 "GND" H 4650 3550 50  0000 C CNN
+F 2 "" H 4650 3700 50  0000 C CNN
+F 3 "" H 4650 3700 50  0000 C CNN
+	1    4650 3700
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
