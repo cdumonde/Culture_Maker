@@ -31,6 +31,7 @@ Controller::Controller(unsigned char id_physical, FONCTION_TYPE function, CONTRO
 // Contructor allowing to load values from a file
 Controller::Controller(string const filename)
 {
+	m_funct = new Fonction();
 	loadController(filename);
 }
 // Destructor
@@ -70,6 +71,10 @@ void Controller::set_id_phys(unsigned char const id)
 {
 	m_id_phys = id;
 }
+bool Controller::set_function(FONCTION_TYPE funct)
+{
+	return m_funct->set_function(funct);	
+}
 bool Controller::set_function(FONCTION_TYPE funct, std::string shortcut)
 {
 	return m_funct->set_function(funct, shortcut);
@@ -98,7 +103,6 @@ void Controller::set_type(CONTROLLER_TYPE const type)
 bool Controller::loadController(const string filename)
 {
 	ifstream flux(filename.c_str());
-
 	#ifdef DEBUG
 		cout << "Attempt to load from [" << filename << "]" << endl;
 	#endif // DEBUG
@@ -112,7 +116,7 @@ bool Controller::loadController(const string filename)
 			switch(i)
 			{
 				case 0:
-				m_funct->set_function((FONCTION_TYPE)c);
+				set_function(static_cast<FONCTION_TYPE> (c));
 				break;
 				case 1:
 				m_id_phys = (unsigned char)c;
@@ -120,9 +124,10 @@ bool Controller::loadController(const string filename)
 				default:
 				m_type = (CONTROLLER_TYPE)c;
 				break;
-			}	
+			}
+			
 		}
-		cout << "LOADED : " << *this << " from " << filename << endl;
+		cout << "LOADED from " << filename << " : " << endl << *this << endl;
 	}
 	else
 	{
@@ -142,10 +147,10 @@ bool Controller::loadController(unsigned char const id)
 bool Controller::saveController(void) const
 {
 	stringstream filename;
-	filename << m_id_phys << ".mod";
+	filename << (int)m_id_phys << ".mod";
     
     // Opening file in truncate mode
-	ofstream flux(filename.c_str());
+	ofstream flux((filename.str()).c_str());
 	
     // Writing output
 	if(flux.is_open())

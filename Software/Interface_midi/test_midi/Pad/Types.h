@@ -6,9 +6,9 @@
 
 enum FONCTION_TYPE
 {
-    SHORTCUT,
-    CUSTOM,//TODO
-    MIDI
+    SHORTCUT = 0,
+    CUSTOM = 1,//TODO
+    MIDI = 2
 };
 enum ADVANCED_FUNCTION //TODO
 {

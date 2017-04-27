@@ -30,6 +30,7 @@ public:
 
 	// Setters
 	void set_id_phys(unsigned char const id);
+	bool set_function(FONCTION_TYPE funct);
 	bool set_function(FONCTION_TYPE funct, std::string shortcut);
     bool set_function(FONCTION_TYPE funct, NOTE note, char hauteur);
     bool set_function(FONCTION_TYPE funct, ADVANCED_FUNCTION f);
