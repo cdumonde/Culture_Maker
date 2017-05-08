@@ -33,7 +33,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -43,201 +43,178 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	2800 1050 4200 1050
+Wire Wire Line
+	4200 1050 4200 2750
+Wire Wire Line
+	4200 2750 4650 2750
+Wire Wire Line
+	2800 2650 2800 2850
+Wire Wire Line
+	2800 2850 4650 2850
+Wire Wire Line
+	2800 4250 4150 4250
+Wire Wire Line
+	4150 4250 4150 2950
+Wire Wire Line
+	4150 2950 4650 2950
+Wire Wire Line
+	4650 3400 3850 3400
+Wire Wire Line
+	3850 3400 3850 1700
+Wire Wire Line
+	3850 1700 2800 1700
+Wire Wire Line
+	4650 3500 3450 3500
+Wire Wire Line
+	3450 3500 3450 3300
+Wire Wire Line
+	3450 3300 2800 3300
+Wire Wire Line
+	4650 3600 3850 3600
+Wire Wire Line
+	3850 3600 3850 4900
+Wire Wire Line
+	3850 4900 2800 4900
 $Comp
-L 74LS353 U?
-U 1 1 58EF2C3F
-P 4950 1650
-F 0 "U?" H 4950 1950 50  0000 C CNN
-F 1 "74LS353" H 4950 1800 50  0000 C CNN
-F 2 "" H 4950 1650 50  0000 C CNN
-F 3 "" H 4950 1650 50  0000 C CNN
-	1    4950 1650
+L 74LS353 U1
+U 1 1 59019BD7
+P 2050 1550
+F 0 "U1" H 2050 1850 50  0000 C CNN
+F 1 "74LS353" H 2050 1700 50  0000 C CNN
+F 2 "Housings_SSOP:TSSOP-16_4.4x5mm_Pitch0.65mm" H 2050 1550 50  0001 C CNN
+F 3 "" H 2050 1550 50  0000 C CNN
+	1    2050 1550
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74LS353 U?
-U 1 1 58EF2C6E
-P 4950 3250
-F 0 "U?" H 4950 3550 50  0000 C CNN
-F 1 "74LS353" H 4950 3400 50  0000 C CNN
-F 2 "" H 4950 3250 50  0000 C CNN
-F 3 "" H 4950 3250 50  0000 C CNN
-	1    4950 3250
+L 74LS353 U2
+U 1 1 59019BD8
+P 2050 3150
+F 0 "U2" H 2050 3450 50  0000 C CNN
+F 1 "74LS353" H 2050 3300 50  0000 C CNN
+F 2 "Housings_SSOP:TSSOP-16_4.4x5mm_Pitch0.65mm" H 2050 3150 50  0001 C CNN
+F 3 "" H 2050 3150 50  0000 C CNN
+	1    2050 3150
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74LS353 U?
-U 1 1 5901881A
-P 4950 4850
-F 0 "U?" H 4950 5150 50  0000 C CNN
-F 1 "74LS353" H 4950 5000 50  0000 C CNN
-F 2 "" H 4950 4850 50  0000 C CNN
-F 3 "" H 4950 4850 50  0000 C CNN
-	1    4950 4850
+L 74LS353 U3
+U 1 1 59019BD9
+P 2050 4750
+F 0 "U3" H 2050 5050 50  0000 C CNN
+F 1 "74LS353" H 2050 4900 50  0000 C CNN
+F 2 "Housings_SSOP:TSSOP-16_4.4x5mm_Pitch0.65mm" H 2050 4750 50  0001 C CNN
+F 3 "" H 2050 4750 50  0000 C CNN
+	1    2050 4750
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_02X03 P?
-U 1 1 59018BDD
-P 2900 5350
-F 0 "P?" H 2900 5550 50  0000 C CNN
-F 1 "CONN_02X03" H 2900 5150 50  0000 C CNN
-F 2 "" H 2900 4150 50  0000 C CNN
-F 3 "" H 2900 4150 50  0000 C CNN
-	1    2900 5350
+L 74LS353 U4
+U 1 1 59019BDB
+P 5400 3450
+F 0 "U4" H 5400 3750 50  0000 C CNN
+F 1 "74LS353" H 5400 3600 50  0000 C CNN
+F 2 "Housings_SSOP:TSSOP-16_4.4x5mm_Pitch0.65mm" H 5400 3450 50  0001 C CNN
+F 3 "" H 5400 3450 50  0000 C CNN
+	1    5400 3450
 	1    0    0    -1  
 $EndComp
-Text Label 2650 5250 2    60   ~ 0
-VCC
-Text Label 2650 5350 2    60   ~ 0
+$Sheet
+S 9500 850  1300 1300
+U 59019E57
+F0 "Connectors" 60
+F1 "conn.sch" 60
+$EndSheet
+Text Label 1300 950  2    60   ~ 0
+D0_1X2
+Text Label 1300 1050 2    60   ~ 0
+D0_1X3
+Text Label 1300 1150 2    60   ~ 0
+D0_1X4
+Text Label 1300 2450 2    60   ~ 0
+D0_2X1
+Text Label 1300 2550 2    60   ~ 0
+D0_2X2
+Text Label 1300 2650 2    60   ~ 0
+D0_2X3
+Text Label 1300 2750 2    60   ~ 0
+D0_2X4
+Text Label 1300 4050 2    60   ~ 0
+D0_3X1
+Text Label 1300 4150 2    60   ~ 0
+D0_3X2
+Text Label 1300 4250 2    60   ~ 0
+D0_3X3
+Text Label 1300 4350 2    60   ~ 0
+D0_3X4
+Text Label 1300 1600 2    60   ~ 0
+D1_1X2
+Text Label 1300 1700 2    60   ~ 0
+D1_1X3
+Text Label 1300 1800 2    60   ~ 0
+D1_1X4
+Text Label 1300 3100 2    60   ~ 0
+D1_2X1
+Text Label 1300 3200 2    60   ~ 0
+D1_2X2
+Text Label 1300 3300 2    60   ~ 0
+D1_2X3
+Text Label 1300 3400 2    60   ~ 0
+D1_2X4
+Text Label 1300 4700 2    60   ~ 0
+D1_3X1
+Text Label 1300 4800 2    60   ~ 0
+D1_3X2
+Text Label 1300 4900 2    60   ~ 0
+D1_3X3
+Text Label 1300 5000 2    60   ~ 0
+D1_3X4
+Text Label 1300 850  2    60   ~ 0
+D0_1X1
+Text Label 4650 4050 2    60   ~ 0
+A_L_0
+Text Label 4650 4150 2    60   ~ 0
+A_L_1
+Text Label 1300 5350 2    60   ~ 0
+A_C_0
+Text Label 1300 5450 2    60   ~ 0
+A_C_1
+Text Label 1300 3750 2    60   ~ 0
+A_C_0
+Text Label 1300 3850 2    60   ~ 0
+A_C_1
+Text Label 1300 2150 2    60   ~ 0
+A_C_0
+Text Label 1300 2250 2    60   ~ 0
+A_C_1
+Text Label 1300 1500 2    60   ~ 0
+D1_1X1
+Text Label 6150 2950 0    60   ~ 0
 D0
-Text Label 2650 5450 2    60   ~ 0
-D1
-Text Label 3150 5250 0    60   ~ 0
-ID
-Text Label 3150 5350 0    60   ~ 0
-A0
-Text Label 3150 5450 0    60   ~ 0
-A1
-Text Label 5700 1150 0    60   ~ 0
-D0
-Text Label 5700 1800 0    60   ~ 0
+Text Label 6150 3600 0    60   ~ 0
 D1
 $Comp
-L 74LS353 U?
-U 1 1 590190D3
-P 8300 3550
-F 0 "U?" H 8300 3850 50  0000 C CNN
-F 1 "74LS353" H 8300 3700 50  0000 C CNN
-F 2 "" H 8300 3550 50  0000 C CNN
-F 3 "" H 8300 3550 50  0000 C CNN
-	1    8300 3550
-	1    0    0    -1  
+L GND #PWR01
+U 1 1 590320A9
+P 4650 3050
+F 0 "#PWR01" H 4650 2800 50  0001 C CNN
+F 1 "GND" H 4650 2900 50  0000 C CNN
+F 2 "" H 4650 3050 50  0000 C CNN
+F 3 "" H 4650 3050 50  0000 C CNN
+	1    4650 3050
+	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5700 1150 7100 1150
-Wire Wire Line
-	7100 1150 7100 2850
-Wire Wire Line
-	7100 2850 7550 2850
-Wire Wire Line
-	5700 2750 5700 2950
-Wire Wire Line
-	5700 2950 7550 2950
-Wire Wire Line
-	5700 4350 7050 4350
-Wire Wire Line
-	7050 4350 7050 3050
-Wire Wire Line
-	7050 3050 7550 3050
-Wire Wire Line
-	7550 3500 6750 3500
-Wire Wire Line
-	6750 3500 6750 1800
-Wire Wire Line
-	6750 1800 5700 1800
-Wire Wire Line
-	7550 3600 6350 3600
-Wire Wire Line
-	6350 3600 6350 3400
-Wire Wire Line
-	6350 3400 5700 3400
-Wire Wire Line
-	7550 3700 6750 3700
-Wire Wire Line
-	6750 3700 6750 5000
-Wire Wire Line
-	6750 5000 5700 5000
 $Comp
-L CONN_02X03 P?
-U 1 1 59019A5F
-P 2900 5900
-F 0 "P?" H 2900 6100 50  0000 C CNN
-F 1 "CONN_02X03" H 2900 5700 50  0000 C CNN
-F 2 "" H 2900 4700 50  0000 C CNN
-F 3 "" H 2900 4700 50  0000 C CNN
-	1    2900 5900
-	1    0    0    -1  
+L GND #PWR02
+U 1 1 590320C5
+P 4650 3700
+F 0 "#PWR02" H 4650 3450 50  0001 C CNN
+F 1 "GND" H 4650 3550 50  0000 C CNN
+F 2 "" H 4650 3700 50  0000 C CNN
+F 3 "" H 4650 3700 50  0000 C CNN
+	1    4650 3700
+	0    1    1    0   
 $EndComp
-Text Label 2650 5800 2    60   ~ 0
-VCC
-Text Label 2650 5900 2    60   ~ 0
-D0
-Text Label 2650 6000 2    60   ~ 0
-D1
-Text Label 3150 5800 0    60   ~ 0
-ID
-Text Label 3150 5900 0    60   ~ 0
-A0
-Text Label 3150 6000 0    60   ~ 0
-A1
-$Comp
-L CONN_02X03 P?
-U 1 1 59019AA8
-P 2900 6400
-F 0 "P?" H 2900 6600 50  0000 C CNN
-F 1 "CONN_02X03" H 2900 6200 50  0000 C CNN
-F 2 "" H 2900 5200 50  0000 C CNN
-F 3 "" H 2900 5200 50  0000 C CNN
-	1    2900 6400
-	1    0    0    -1  
-$EndComp
-Text Label 2650 6300 2    60   ~ 0
-VCC
-Text Label 2650 6400 2    60   ~ 0
-D0
-Text Label 2650 6500 2    60   ~ 0
-D1
-Text Label 3150 6300 0    60   ~ 0
-ID
-Text Label 3150 6400 0    60   ~ 0
-A0
-Text Label 3150 6500 0    60   ~ 0
-A1
-$Comp
-L CONN_02X03 P?
-U 1 1 59019AE8
-P 2900 6900
-F 0 "P?" H 2900 7100 50  0000 C CNN
-F 1 "CONN_02X03" H 2900 6700 50  0000 C CNN
-F 2 "" H 2900 5700 50  0000 C CNN
-F 3 "" H 2900 5700 50  0000 C CNN
-	1    2900 6900
-	1    0    0    -1  
-$EndComp
-Text Label 2650 6800 2    60   ~ 0
-VCC
-Text Label 2650 6900 2    60   ~ 0
-D0
-Text Label 2650 7000 2    60   ~ 0
-D1
-Text Label 3150 6800 0    60   ~ 0
-ID
-Text Label 3150 6900 0    60   ~ 0
-A0
-Text Label 3150 7000 0    60   ~ 0
-A1
-$Comp
-L CONN_02X03 P?
-U 1 1 59019B29
-P 2900 7400
-F 0 "P?" H 2900 7600 50  0000 C CNN
-F 1 "CONN_02X03" H 2900 7200 50  0000 C CNN
-F 2 "" H 2900 6200 50  0000 C CNN
-F 3 "" H 2900 6200 50  0000 C CNN
-	1    2900 7400
-	1    0    0    -1  
-$EndComp
-Text Label 2650 7300 2    60   ~ 0
-VCC
-Text Label 2650 7400 2    60   ~ 0
-D0
-Text Label 2650 7500 2    60   ~ 0
-D1
-Text Label 3150 7300 0    60   ~ 0
-ID
-Text Label 3150 7400 0    60   ~ 0
-A0
-Text Label 3150 7500 0    60   ~ 0
-A1
 $EndSCHEMATC
